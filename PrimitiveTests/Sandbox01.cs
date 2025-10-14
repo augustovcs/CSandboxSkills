@@ -53,4 +53,58 @@ public class Sandbox01
         Console.WriteLine($"The tax rate is {tax_rate}");
     
     }
+    
+    public void SwitchAdvancedMethod()
+    {
+        var interest_rate = 0.00;
+        var monthlyFee = 0.00;
+        
+        Console.WriteLine("What account u wanna open? \n (saving/checking/business/free) ");
+        var account = Console.ReadLine();
+
+        var income = 0.00;
+        
+        if (account == "business")
+        {
+            Console.WriteLine("How much u earn?");
+            income = Convert.ToDouble(Console.ReadLine());
+        }
+        
+        switch (account)
+        {
+            case "saving":
+                interest_rate = 0.00;
+                monthlyFee = 0.00;
+                Console.WriteLine($"IR: {interest_rate} and MF: {monthlyFee}");
+                break;
+            case "checking":
+                interest_rate = 0.45;
+                monthlyFee = 0.15;
+                Console.WriteLine($"IR: {interest_rate} and MF: {monthlyFee}");
+                break;
+            case "business":
+                if (income > 50000)
+                {
+                    interest_rate = 0.15;
+                    monthlyFee = 0.80;
+                    Console.WriteLine($"IR: {interest_rate} and MF: {monthlyFee}");
+
+                }
+                else
+                {
+                    interest_rate = 0.20;
+                    monthlyFee = 1.00;
+                    Console.WriteLine($"IR: {interest_rate} and MF: {monthlyFee}");
+                }
+                break;
+            case "free":
+                interest_rate = 1.25;
+                monthlyFee = 0.00;
+                Console.WriteLine($"IR: {interest_rate} and MF: {monthlyFee}");
+                break;
+            default:
+                Console.WriteLine("Invalid type! choose correctly please??");
+                break;
+        }
+    }
 }

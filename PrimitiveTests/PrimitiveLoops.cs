@@ -1,6 +1,11 @@
-namespace CSandboxSkills.Sandbox01;
+namespace CSandboxSkills.PrimitiveLoops;
 
-public class Sandbox01
+//This is the tutorial for primitive loops in c#
+// U need to know at least the base and variables before studying this!
+
+
+
+public class PrimitiveLoops
 {
     public void IfElseMethod()
     {

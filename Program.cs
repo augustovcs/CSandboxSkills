@@ -1,4 +1,4 @@
-﻿using CSandboxSkills.Sandbox01;
+﻿using CSandboxSkills.PrimitiveLoops;
 
 class Program
 {
@@ -6,7 +6,7 @@ class Program
     static void Main(string[] args)
     {
         //init the method
-        Sandbox01 sandbox = new Sandbox01();
+        PrimitiveLoops sandbox = new PrimitiveLoops();
         sandbox.ForControlStructure();
 
     }    

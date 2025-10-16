@@ -7,7 +7,7 @@ class Program
     {
         //init the method
         Sandbox01 sandbox = new Sandbox01();
-        sandbox.SwitchAdvancedMethod();
+        sandbox.ForControlStructure();
 
     }    
     

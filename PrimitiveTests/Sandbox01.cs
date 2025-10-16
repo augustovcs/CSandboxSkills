@@ -52,7 +52,7 @@ public class Sandbox01
         
         Console.WriteLine($"The tax rate is {tax_rate}");
     
-    }
+    } 
     
     public void SwitchAdvancedMethod()
     {
@@ -106,5 +106,49 @@ public class Sandbox01
                 Console.WriteLine("Invalid type! choose correctly please??");
                 break;
         }
+    }
+
+    public void ControlStructuresLoops()
+    {
+        do
+        {
+            Console.WriteLine("Write a number between 0 and 10");
+            var input = int.Parse(Console.ReadLine());
+
+            switch (input)
+            {
+                case < 5:
+                    Console.WriteLine("less than 5");
+                    break;
+                case > 5:
+                    Console.WriteLine("more than 5");
+                    break;
+            }
+        } while (true);
+
+    }
+
+    public void ForControlStructure()
+    {
+        var number = 0;
+        for (int i = 0; i < 10; i++)
+        { 
+            number += 1;
+            Console.WriteLine(number);
+            switch (number)
+            {
+                case 1:
+                    Console.WriteLine("zero - starting");
+                    break;
+                case 5:
+                    Console.WriteLine("middle of the loop");
+                    break;
+                case 10:
+                    Console.WriteLine("the end!!");
+                    break;
+            }
+            
+        }
+            
     }
 }

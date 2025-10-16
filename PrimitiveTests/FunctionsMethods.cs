@@ -4,5 +4,10 @@ namespace CSandboxSkills.FunctionsMethods;
 
 public class FunctionsMethods
 {
+    public int MultipliesTwoNumbers(int x, int y)
+    {
+        return x * y;
+    }
+    
     
 }

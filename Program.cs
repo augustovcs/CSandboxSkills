@@ -1,6 +1,6 @@
 ﻿using CSandboxSkills.PrimitiveLoops;
 using CSandboxSkills.FunctionsMethods;
-
+using CSandboxSkills.PrimitiveSintaxExample;
 class Program
 {
 
@@ -8,13 +8,10 @@ class Program
     {
         //init the method
         //PrimitiveLoops sandbox = new PrimitiveLoops();
-        FunctionsMethods sandbox = new FunctionsMethods();
+        //FunctionsMethods sandbox = new FunctionsMethods();
+        PrimitiveSintaxExample sandbox = new PrimitiveSintaxExample();
         
-        Console.WriteLine(sandbox.MultipliesTwoNumbers(5, 10));
-        
-        //first value = normal number
-        //second value = the % discount
-        Console.WriteLine($"{sandbox.DiscountTwoNumbers(100, 10)}");
+        sandbox.ConsoleStarter();
 
     }    
     

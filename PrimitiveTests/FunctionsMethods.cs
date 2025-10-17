@@ -8,6 +8,14 @@ public class FunctionsMethods
     {
         return x * y;
     }
-    
+
+    public decimal DiscountTwoNumbers(int x, int y)
+    {
+        decimal converting = y / 100m;
+        var discount_num = x * converting;
+        
+        return discount_num;
+        
+    }
     
 }

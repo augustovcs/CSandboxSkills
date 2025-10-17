@@ -11,6 +11,10 @@ class Program
         FunctionsMethods sandbox = new FunctionsMethods();
         
         Console.WriteLine(sandbox.MultipliesTwoNumbers(5, 10));
+        
+        //first value = normal number
+        //second value = the % discount
+        Console.WriteLine($"{sandbox.DiscountTwoNumbers(100, 10)}");
 
     }    
     

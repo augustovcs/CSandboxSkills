@@ -28,8 +28,7 @@ public class PrimitiveSintaxExample
     public string update_input;
 
 
-    public List<List<string>> inputProducts = new List<List<string>>();
-    
+    public Dictionary<string, List<string>> listing_prod = new Dictionary<string, List<string>>();
     public void ConsoleStarter()
     {
 
@@ -55,43 +54,64 @@ public class PrimitiveSintaxExample
                     Console.WriteLine("Enter price: ");
                     prod_price = Console.ReadLine();
 
-                    Console.WriteLine("Enter quantity: ");
+                    Console.WriteLine("Enter stock status: ");
                     prod_stock = Console.ReadLine();
 
-                    inputProducts.Add(new List<string>() { prod_name, prod_price, prod_stock });
+                    listing_prod[prod_name] = new List<string> { prod_price, prod_stock };
+
+
                     break;
 
                 case "2":
-                    Console.WriteLine("Removing products... ");
-                    inputProducts.RemoveAll(x => x.Contains(prod_name));
+                    Console.WriteLine("Choose a product: ");
+                    var input = Console.ReadLine();
+
+
+                    foreach (var item in listing_prod.Keys)
+                    {
+                        if (input == item)
+                        {
+                            listing_prod[input].Clear();
+                            Console.WriteLine($"Cleaning {input}");
+                            break;
+                        }
+                    }
+                     
+                    
                     break;
 
                 case "3":
                     Console.WriteLine("what product you want update the stock? ");
                     update_input = Console.ReadLine();
 
-                    var found_product = inputProducts.FirstOrDefault(x => x.Contains(update_input));
-                    if (found_product != null)
+                    if (listing_prod.ContainsKey(update_input))
                     {
-                        Console.WriteLine("How much u wanna increase the stock? ");
-                        prod_stock = Console.ReadLine();
+                        Console.WriteLine("Enter the new stock value: ");
+                        var new_stock = Console.ReadLine();
+                        
+                        listing_prod[update_input] = new List<string> { prod_price, new_stock };
+                        
                     }
-
-                    else
-                    {
-                        Console.WriteLine("That product is already this stock level! .");
-                    }
-
+                    
+                    
+              
+                    
                     break;
 
                 case "4":
                     Console.WriteLine("Listing all products...");
-                    foreach (var prod in inputProducts)
+                    foreach (var prod in listing_prod)
                     {
-                        foreach (var item in prod)
+                        var key = prod.Key;
+                        var val = prod.Value;
+                        
+                        Console.WriteLine(key);
+
+                        foreach (var v in val)
                         {
-                            Console.WriteLine(item);
+                            Console.WriteLine(v);
                         }
+                        
                     }
 
                     break;
@@ -103,10 +123,6 @@ public class PrimitiveSintaxExample
 
         }
         
-
-        
     }
-
-    
     
 }

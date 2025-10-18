@@ -1,5 +1,11 @@
 namespace CSandboxSkills.OOPSintax;
 
+public interface NeedToSay
+{
+    public void Say();
+}
+
+
 public class Animal
 {
 
@@ -21,12 +27,18 @@ public class Dog : Animal
 
 }
 
-public class Cat : Animal
+public class Cat : Animal,  NeedToSay
 {
 
     public override void WoofOrMeow()
     {
         Console.WriteLine("Meoow - I'm a cat");
+    }
+
+    public void Say()
+    {
+        Console.WriteLine("Now, i'm saying this shitttt wtf cats cant say ");
+        
     }
     
 } 

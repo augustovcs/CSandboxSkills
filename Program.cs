@@ -24,7 +24,8 @@ class Program
         
         Cat catSoundOOP = new Cat();
         catSoundOOP.WoofOrMeow();
-        
+        catSoundOOP.Say();
+
     }    
     
 }

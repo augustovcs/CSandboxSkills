@@ -47,20 +47,13 @@ public class Cat : Animal,  NeedToSay
 
 public class Usernames
 {
-    public string Name { get; set; }
+    public string Name { get; set; } 
     public string Surname { get; set; }
     
 }
 
 public class User
 {
-    public void User01()
-    {
-        Usernames user01 = new Usernames();
-        user01.Name = "John";
-        user01.Surname = "Doe";
-        
-        Console.WriteLine(user01.Name + " " + user01.Surname);
-    }
+    public Usernames Info { get; set; } = new  Usernames();
     
 }

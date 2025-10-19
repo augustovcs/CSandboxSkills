@@ -27,7 +27,15 @@ class Program
         catSoundOOP.Say();
         
         User user = new User();
-        user.User01();
+        user.Info.Name =  "John";
+        user.Info.Surname = "Doe";
+        Console.WriteLine(user.Info.Name + " "  + user.Info.Surname);
+
+        Usernames user02 = new Usernames();
+        user02.Name = "Doe";
+        user02.Surname = "John";
+        
+        Console.WriteLine(user02.Name + " " + user02.Surname);
 
     }    
     

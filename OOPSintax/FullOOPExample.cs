@@ -42,3 +42,25 @@ public class Cat : Animal,  NeedToSay
     }
     
 } 
+
+// Props and objects
+
+public class Usernames
+{
+    public string Name { get; set; }
+    public string Surname { get; set; }
+    
+}
+
+public class User
+{
+    public void User01()
+    {
+        Usernames user01 = new Usernames();
+        user01.Name = "John";
+        user01.Surname = "Doe";
+        
+        Console.WriteLine(user01.Name + " " + user01.Surname);
+    }
+    
+}

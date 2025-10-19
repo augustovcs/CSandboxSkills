@@ -25,6 +25,9 @@ class Program
         Cat catSoundOOP = new Cat();
         catSoundOOP.WoofOrMeow();
         catSoundOOP.Say();
+        
+        User user = new User();
+        user.User01();
 
     }    
     

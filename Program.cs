@@ -40,9 +40,12 @@ class Program
   
         
         Console.WriteLine(user02.Name + " " + user02.Surname);
-        
-        var asyncronous = new AsyncronousMethod();
-        await asyncronous.Running();
+   
+        MainLibrary mainLibrary = new MainLibrary();
+        mainLibrary.ConsoleRun();
+
+        /*var asyncronous = new AsyncronousMethod();
+        await asyncronous.Running();*/
 
     }    
     

@@ -6,7 +6,7 @@ using CSandboxSkills.OOPSintax;
 class Program
 {
 
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         
         
@@ -36,10 +36,12 @@ class Program
         user02.Name = "Doe";
         user02.Surname = "John";
         
-        AsyncronousMethod asyncronous = new AsyncronousMethod();
-        asyncronous.Run();
+  
         
         Console.WriteLine(user02.Name + " " + user02.Surname);
+        
+        var asyncronous = new AsyncronousMethod();
+        await asyncronous.Running();
 
     }    
     

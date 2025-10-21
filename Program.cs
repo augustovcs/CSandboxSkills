@@ -1,4 +1,5 @@
-﻿using CSandboxSkills.PrimitiveLoops;
+﻿using CSandboxSkills.AsyncronousMethod;
+using CSandboxSkills.PrimitiveLoops;
 using CSandboxSkills.FunctionsMethods;
 using CSandboxSkills.PrimitiveSintaxExample;
 using CSandboxSkills.OOPSintax;
@@ -34,6 +35,9 @@ class Program
         Usernames user02 = new Usernames();
         user02.Name = "Doe";
         user02.Surname = "John";
+        
+        AsyncronousMethod asyncronous = new AsyncronousMethod();
+        asyncronous.Run();
         
         Console.WriteLine(user02.Name + " " + user02.Surname);
 
